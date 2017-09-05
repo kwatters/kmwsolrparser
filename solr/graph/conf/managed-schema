@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Solr managed schema - automatically generated - DO NOT EDIT -->
+<schema name="graph-example" version="1.6">
+  <uniqueKey>id</uniqueKey>
+  <fieldType name="date" class="solr.TrieDateField" positionIncrementGap="0" docValues="true" precisionStep="0"/>
+  <fieldType name="long" class="solr.TrieLongField" positionIncrementGap="0" docValues="true" precisionStep="0"/>
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true"/>
+  <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
+  <field name="_version_" type="long" indexed="true" stored="false"/>
+  <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <dynamicField name="*" type="string" docValues="true" multiValued="true" indexed="true" stored="true"/>
+</schema>

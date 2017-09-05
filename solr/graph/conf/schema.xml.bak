@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<schema name="graph-example" version="1.6">
+
+	<!-- Field Types -->
+	<fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true" />
+	<fieldType name="long" class="solr.TrieLongField" docValues="true" precisionStep="0" positionIncrementGap="0" />
+	<fieldType name="date" class="solr.TrieDateField" docValues="true" precisionStep="0" positionIncrementGap="0" />
+
+	<!--  Fields -->
+	<field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+	<field name="_version_" type="long" indexed="true" stored="false" />
+	<field name="_root_" type="string" indexed="true" stored="false" docValues="false" />
+	<!-- Catch all field.  Index what ever you throw at it. -->
+	<dynamicField name="*" type="string" indexed="true" stored="true" multiValued="true" docValues="true" />
+	<!-- primary key/id field -->
+	<uniqueKey>id</uniqueKey>
+
+</schema>
