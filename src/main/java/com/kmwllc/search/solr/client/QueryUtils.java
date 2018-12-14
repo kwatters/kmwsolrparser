@@ -171,8 +171,9 @@ public class QueryUtils {
 		FieldType fieldType = schema.getFieldType(t.getField());
 		Analyzer fieldAnalyzer = fieldType.getQueryAnalyzer();
 
+		
 		// If this field is a numeric type just return the value , don't bother tokenizing
-		if (fieldType.getNumericType() != null) {
+		if (fieldType.getNumberType() != null) {
 			// this is a string.. just return
 			ArrayList<String> numericTokens = new ArrayList<String>();
 			numericTokens.add(t.getTerm());
